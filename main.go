@@ -1,12 +1,9 @@
 package main
 
 import (
+	_ "github.com/ungerik/NextRealityMapServer/mapserver"
 	"github.com/ungerik/go-rest"
 )
-
-func isPow2(x int) bool {
-	return x&(x-1) == 0
-}
 
 func main() {
 
