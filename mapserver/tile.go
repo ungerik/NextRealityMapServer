@@ -1,5 +1,7 @@
 package mapserver
 
 type Tile struct {
-	Map *Map
+	Map  *Map
+	Pos  IntPoint
+	Data []byte
 }

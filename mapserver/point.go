@@ -14,10 +14,16 @@ func (self *Point) IsInteger() bool {
 }
 
 func (self *Point) IntPoint() IntPoint {
-	return IntPoint{int64(self.X), int64(self.Y)}
+	return IntPoint{int(self.X), int(self.Y)}
 }
 
 type IntPoint struct {
-	X int64
-	Y int64
+	X int
+	Y int
+}
+
+type IntSize IntPoint
+
+func (self *IntSize) IncludesPoint(p IntPoint) bool {
+	return p.X >= 0 && p.X < self.X && p.Y >= 0 && p.Y < self.Y
 }

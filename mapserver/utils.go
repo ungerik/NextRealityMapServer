@@ -4,6 +4,12 @@ import (
 // "encoding/binary"
 )
 
+type PointOutsideBounds struct{}
+
+func (self PointOutsideBounds) Error() string {
+	return "PointOutsideBounds"
+}
+
 func isPow2(x int) bool {
 	return x&(x-1) == 0
 }
